@@ -1,2 +1,2 @@
 # Final-Project_10c
-Final Project: Import audio file and create visual representation
+Final Project: Implement hangman game with graphical components (buttons and potential hanged-man)
