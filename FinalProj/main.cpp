@@ -184,3 +184,4 @@ exit:
 	return 0;
 }
 
+//note: buggy for characters & need to implement number of guesses = number of letters in phrase (its only fair)
