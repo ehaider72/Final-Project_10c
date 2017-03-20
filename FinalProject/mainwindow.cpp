@@ -1,14 +1,10 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include <Application>
+#include <QGraphicsScene>
+#include <QGraphicsItem>
+#include <QGraphicsView>
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
-    ui->setupUi(this);
-}
+int main(int argc, char *argv[]){
+    QApplication a(argc,argv);
 
-MainWindow::~MainWindow()
-{
-    delete ui;
+    return a.exec();
 }

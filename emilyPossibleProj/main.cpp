@@ -2,8 +2,13 @@
 
 #include <QApplication>
 #include <QGraphicsScene>
-#include <QGraphicsRectItem> //for rectangle objects ... subclass of QGraphicsItem
+#include "myrect.h"
+//#include <QGraphicsRectItem> //for rectangle objects ... subclass of QGraphicsItem
 #include <QGraphicsView> //widget to visualize scene
+
+//keyPressEvent() --
+//QKeyEvent() -- tells what key is pressed
+//QDebug --header file to print to console and help debug
 
 
 int main(int argc, char *argv[])
@@ -14,7 +19,8 @@ int main(int argc, char *argv[])
     QGraphicsScene *scene = new QGraphicsScene();
 
     //create item to put in scene
-    QGraphicsRectItem *rect = new QGraphicsRectItem(); //default width and length 0x0
+    //QGraphicsRectItem *rect = new QGraphicsRectItem(); //default width and length 0x0
+    MyRect *rect = new MyRect();
     rect->setRect(0,0,100,100); //first two coordinates x,y location on screen, second two are length and width
 
     //add item to scene
