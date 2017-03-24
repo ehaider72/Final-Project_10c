@@ -1,7 +1,10 @@
 #ifndef LOSSES_H
 #define LOSSES_H
 
-//falling limbs
+//"What's happening here?"
+//-generate limbs
+//-make limbs fall into place
+//-make body fall when hanged
 
 #include <QGraphicsRectItem>
 #include <QObject>
@@ -10,7 +13,8 @@ class Losses : public QObject,public QGraphicsRectItem{
     Q_OBJECT
 public:
     Losses();
-    void hang_him();
+    bool hangTheMan();
+
 public slots:  //a member fn that can be connect to a signal
     void move();
 

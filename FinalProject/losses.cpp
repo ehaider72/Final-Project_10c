@@ -17,17 +17,41 @@ Losses::Losses(){
     timer->start(50); //50 ms
 }
 
+bool Losses::hangTheMan(){ //evaluates number of limbs that have been hung
+    QList <QGraphicsItem> colliding_items = collidingItems();
+    int cnt = 0;
+    n = colliding_items.size();
+    const int i = 6;//max number of limbs to be hung
+    a = 0;
+    while(a <= n && cnt < i)
+    {
+        if (typeid(*colliding_items[a]) == typeid(Losses))
+            cnt++; //how many body parts we've hung already
+
+        if (cnt == i)
+            return true;
+        else if (a==n && cnt != i){
+            return false;
+        }
+
+        a++;
+    };
+}
+
 void Losses::move(){
-    //if out of limbs then hang the man
-    QList<QGraphicsItem> colliding_items = collidingItems();
-    for (int i = 0, n = colliding_items.size(); i<n; ++i){
-        //if (typeid(*(colliding_items[i])))
+
+    if(hangTheMan()){
+        //make him drop
     }
-    //else
-    setPos(x(),y()+5);//setPos(x(),y()-10);
-    if(pos().y() + rect().height() < 0){
-        scene()->removeItem(this);
-        delete this;
-        //qDebug() << "Bullet deleted";
+    else //hang some limbs
+    {
+        setPos(x(),y()+5);//setPos(x(),y()-10);
+        if(pos().y() + rect().height() < 0){
+            scene()->removeItem(this);
+            delete this;
+            //qDebug() << "Bullet deleted";
+        }
+
     }
+
 }
