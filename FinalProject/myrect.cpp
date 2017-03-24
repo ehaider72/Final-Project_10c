@@ -1,7 +1,15 @@
 #include "myrect.h"
 #include <QKeyEvent>
+#include <QGraphicsScene>
+#include "Losses.h"
 
-//#include <QDebug>
+#include <QDebug>
+
+void MyRect::spawn(){
+   Losses * loss = new Losses();
+   scene()->addItem(loss);
+}
+
 void MyRect::keyPressEvent(QKeyEvent *event){
 // qDebug() << "MyRect knows that you pressed a key";
     //check what key is pressed
@@ -17,6 +25,13 @@ void MyRect::keyPressEvent(QKeyEvent *event){
     else if (event->key() == Qt::Key_Down){
         setPos(x(),y()+10); //positive moves downwards
     }
+    else if (event->key() == Qt::Key_Space){
+        Losses * losses = new Losses();
+        //qDebug() << "bullet created";
+        losses->setPos(x(),y());
+        scene()->addItem(losses);
+    }
+
     //******************************************************
     //for hangman -- want to move printed/pushed letters to jail
     if (event->key() == Qt::Key_A){}

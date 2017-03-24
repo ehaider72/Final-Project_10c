@@ -1,4 +1,4 @@
-//note: this game is hangman in progress
+/*//note: this game is hangman in progress
 
 #include <iostream>
 #include <string>
@@ -149,7 +149,7 @@ reenter:
         /*if (7 - cnt == 0)
         {
         cout << "You lost!" << " \n";
-        }*/
+        }
     }
     return guess;
 
@@ -183,5 +183,5 @@ exit:
     cin.get();
     return 0;
 }
-
 //note: buggy for characters & need to implement number of guesses = number of letters in phrase (its only fair)
+*/
