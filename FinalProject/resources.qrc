@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>trojan_arm_left.png</file>
+        <file>trojan_arm_right.png</file>
+        <file>trojan_body.png</file>
+        <file>trojan_head.png</file>
+        <file>trojan_leg_left.png</file>
+        <file>trojan_leg_right.png</file>
+        <file>trojan_noose.png</file>
+    </qresource>
+</RCC>

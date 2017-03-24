@@ -25,11 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp \
     myrect.cpp \
-    losses.cpp \
-    hangman.cpp
+    hangman.cpp \
+    limb.cpp
 
 HEADERS  += \
     myrect.h \
-    losses.h
+    limb.h
 
 FORMS    +=
+
+RESOURCES += \
+    resources.qrc

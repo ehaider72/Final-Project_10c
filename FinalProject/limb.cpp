@@ -1,11 +1,12 @@
-#include "Losses.h"
+#include "limb.h"
 #include <QTimer>
 #include <QDebug>
 #include <QGraphicsScene>
+#include <QList>
 
 //falling limbs
 
-Losses::Losses(){
+limb::limb(){
     //draw rect
     setRect(0,0,10,50); //xy lw
 
@@ -17,15 +18,15 @@ Losses::Losses(){
     timer->start(50); //50 ms
 }
 
-bool Losses::hangTheMan(){ //evaluates number of limbs that have been hung
-    QList <QGraphicsItem> colliding_items = collidingItems();
+bool limb::hangTheMan(){ //evaluates number of limbs that have been hung
+   // QList <QGraphicsItem> colliding_items = collidingItems();
     int cnt = 0;
-    n = colliding_items.size();
+   // n = colliding_items.size();
     const int i = 6;//max number of limbs to be hung
-    a = 0;
-    while(a <= n && cnt < i)
+    int a = 0;
+   /* while(a <= n && cnt < i)
     {
-        if (typeid(*colliding_items[a]) == typeid(Losses))
+        if (typeid(*colliding_items[a]) == typeid(limb))
             cnt++; //how many body parts we've hung already
 
         if (cnt == i)
@@ -35,16 +36,24 @@ bool Losses::hangTheMan(){ //evaluates number of limbs that have been hung
         }
 
         a++;
-    };
+    };*/
+    return true; //for testing
 }
 
-void Losses::move(){
+void limb::move(){
 
     if(hangTheMan()){
         //make him drop
     }
     else //hang some limbs
     {
+        //if head
+       // setPos(x()+(1/3)*rect().width(),y());
+        //else if body
+        //else if arm1
+        //else if arm2
+        //else if leg1
+        //else if leg2
         setPos(x(),y()+5);//setPos(x(),y()-10);
         if(pos().y() + rect().height() < 0){
             scene()->removeItem(this);

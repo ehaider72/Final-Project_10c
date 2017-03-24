@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     player->setPos(view->width()/2,view->height() - player->rect().height());
 
     QTimer * timer = new QTimer();
-    QObject::connect(timer,SIGNAL(timeout()), player,SLOT(spawn()));
+    QObject::connect(timer,SIGNAL(timeout()), player,SLOT(limb()));    //QObject::connect(timer,SIGNAL(timeout()), player,SLOT(spawn()));
     timer->start(2000);
 
 

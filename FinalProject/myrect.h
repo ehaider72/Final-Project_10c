@@ -8,6 +8,7 @@ class MyRect :  public QObject, public QGraphicsRectItem{
     Q_OBJECT
 public:
     void keyPressEvent(QKeyEvent *event);
+    void buttonPressEvent(QKeyEvent *event);
 public slots:
     void spawn();
 };

@@ -1,5 +1,5 @@
-#ifndef LOSSES_H
-#define LOSSES_H
+#ifndef LIMB_H
+#define LIMB_H
 
 //"What's happening here?"
 //-generate limbs
@@ -9,10 +9,10 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
-class Losses : public QObject,public QGraphicsRectItem{
+class limb : public QObject,public QGraphicsRectItem{
     Q_OBJECT
 public:
-    Losses();
+    limb();
     bool hangTheMan();
 
 public slots:  //a member fn that can be connect to a signal
@@ -23,4 +23,4 @@ public slots:  //a member fn that can be connect to a signal
 
 
 
-#endif // LOSSES_H
+#endif // LIMB_H

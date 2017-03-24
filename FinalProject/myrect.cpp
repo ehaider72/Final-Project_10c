@@ -1,12 +1,12 @@
 #include "myrect.h"
 #include <QKeyEvent>
 #include <QGraphicsScene>
-#include "Losses.h"
+#include "limb.h"
 
 #include <QDebug>
 
 void MyRect::spawn(){
-   Losses * loss = new Losses();
+   limb * loss = new limb();
    scene()->addItem(loss);
 }
 
@@ -26,10 +26,10 @@ void MyRect::keyPressEvent(QKeyEvent *event){
         setPos(x(),y()+10); //positive moves downwards
     }
     else if (event->key() == Qt::Key_Space){
-        Losses * losses = new Losses();
+        limb * mylimb = new limb();
         //qDebug() << "bullet created";
-        losses->setPos(x(),y());
-        scene()->addItem(losses);
+        mylimb->setPos(x(),y());
+        scene()->addItem(mylimb);
     }
 
     //******************************************************
