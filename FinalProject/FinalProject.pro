@@ -24,13 +24,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp \
-    myrect.cpp \
     hangman.cpp \
-    limb.cpp
+    head.cpp \
+    body.cpp \
+    rightarm.cpp \
+    leftarm.cpp \
+    rightleg.cpp \
+    leftleg.cpp
 
 HEADERS  += \
-    myrect.h \
-    limb.h
+    head.h \
+    body.h \
+    rightarm.h \
+    leftarm.h \
+    rightleg.h \
+    leftleg.h \
+    hangman.h
 
 FORMS    +=
 

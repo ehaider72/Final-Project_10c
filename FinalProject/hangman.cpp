@@ -1,4 +1,4 @@
-/*//note: this game is hangman in progress
+//note: this game is hangman in progress
 
 #include <iostream>
 #include <string>
