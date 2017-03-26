@@ -1,5 +1,56 @@
-//note: this game is hangman in progress
+#include "hangman.h"
+#include <QGraphicsTextItem>
+#include <QFont>
+#include "body.h"
+#include "guesses.h"
+#include "head.h"
+#include "leftarm.h"
+#include "rightarm.h"
+#include "leftleg.h"
+#include "rightleg.h"
+#include "noose.h"
+#include <QBrush>
+#include <QImage>
+#include <QPalette>
 
+hangman::hangman(QWidget * parent){
+    scene = new QGraphicsScene();
+    scene->setSceneRect(0,0,800,600);
+
+    setBackgroundBrush(QBrush(QImage(":/Images/trojan_field.png")));
+
+    setScene(scene);
+    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    setFixedSize(800,600); //whats this do
+
+    noose* trojanNoose = new noose();
+    scene->addItem(trojanNoose);
+   // Guesses *guesses = new Guesses();
+   // scene->addItem(guesses);
+    head* trojanHead = new head();
+    scene->addItem(trojanHead);
+    body* trojanBody = new body();
+    scene->addItem(trojanBody);
+    rightArm* trojanRArm = new rightArm();
+    scene->addItem(trojanRArm);
+    leftArm* trojanLArm = new leftArm();
+    scene->addItem(trojanLArm);
+    rightLeg* trojanRLeg = new rightLeg();
+    scene->addItem(trojanRLeg);
+    leftLeg* trojanLLeg = new leftLeg();
+    scene->addItem(trojanLLeg);
+
+
+//guesses*/
+
+show();
+}
+
+
+
+//note: this game is hangman in progress
+/*
 #include <iostream>
 #include <string>
 #include <cstdlib>

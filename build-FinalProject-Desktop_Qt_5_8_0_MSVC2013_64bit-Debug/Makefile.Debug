@@ -50,13 +50,16 @@ SOURCES       = ..\FinalProject\main.cpp \
 		..\FinalProject\rightarm.cpp \
 		..\FinalProject\leftarm.cpp \
 		..\FinalProject\rightleg.cpp \
-		..\FinalProject\leftleg.cpp debug\qrc_resources.cpp \
+		..\FinalProject\leftleg.cpp \
+		..\FinalProject\guesses.cpp \
+		..\FinalProject\noose.cpp debug\qrc_resources.cpp \
 		debug\moc_head.cpp \
 		debug\moc_body.cpp \
 		debug\moc_rightarm.cpp \
 		debug\moc_leftarm.cpp \
 		debug\moc_rightleg.cpp \
-		debug\moc_leftleg.cpp
+		debug\moc_leftleg.cpp \
+		debug\moc_noose.cpp
 OBJECTS       = debug\main.obj \
 		debug\hangman.obj \
 		debug\head.obj \
@@ -65,27 +68,35 @@ OBJECTS       = debug\main.obj \
 		debug\leftarm.obj \
 		debug\rightleg.obj \
 		debug\leftleg.obj \
+		debug\guesses.obj \
+		debug\noose.obj \
 		debug\qrc_resources.obj \
 		debug\moc_head.obj \
 		debug\moc_body.obj \
 		debug\moc_rightarm.obj \
 		debug\moc_leftarm.obj \
 		debug\moc_rightleg.obj \
-		debug\moc_leftleg.obj
+		debug\moc_leftleg.obj \
+		debug\moc_noose.obj
 
 DIST          =  ..\FinalProject\head.h \
 		..\FinalProject\body.h \
 		..\FinalProject\rightarm.h \
 		..\FinalProject\leftarm.h \
 		..\FinalProject\rightleg.h \
-		..\FinalProject\leftleg.h ..\FinalProject\main.cpp \
+		..\FinalProject\leftleg.h \
+		..\FinalProject\hangman.h \
+		..\FinalProject\guesses.h \
+		..\FinalProject\noose.h ..\FinalProject\main.cpp \
 		..\FinalProject\hangman.cpp \
 		..\FinalProject\head.cpp \
 		..\FinalProject\body.cpp \
 		..\FinalProject\rightarm.cpp \
 		..\FinalProject\leftarm.cpp \
 		..\FinalProject\rightleg.cpp \
-		..\FinalProject\leftleg.cpp
+		..\FinalProject\leftleg.cpp \
+		..\FinalProject\guesses.cpp \
+		..\FinalProject\noose.cpp
 QMAKE_TARGET  = FinalProject
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = FinalProject.exe
@@ -171,10 +182,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) FinalProject.zip $(SOURCES) $(DIST) ..\FinalProject\FinalProject.pro D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\spec_pre.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\common\angle.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\common\msvc-base.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\common\msvc-desktop.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\qconfig.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dcore.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dextras.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dinput.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dlogic.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquick.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3drender.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3drender_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axbase.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axbase_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axcontainer.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axserver.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axserver_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_bluetooth.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_charts.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_charts_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_clucene_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_concurrent.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_core.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_core_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_datavisualization.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_dbus.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_dbus_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_designer.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_designer_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gamepad.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gui.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gui_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_help.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_help_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_location.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_location_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimedia.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_network.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_network_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_networkauth.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_networkauth_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_nfc.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_nfc_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_opengl.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_opengl_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_openglextensions.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_positioning.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_positioning_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_printsupport.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_purchasing.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_purchasing_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qml.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qml_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmltest.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quick.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quick_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_script.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_script_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scripttools.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scripttools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scxml.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scxml_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sensors.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sensors_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialbus.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialport.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialport_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sql.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sql_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_svg.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_svg_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_testlib.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_testlib_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_texttospeech.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_uiplugin.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_uitools.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_uitools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_webchannel.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_websockets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_websockets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_widgets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_widgets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_winextras.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_winextras_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xml.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xml_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_zlib_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qt_functions.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qt_config.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\win32-msvc2013\qmake.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\spec_post.prf .qmake.stash D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\exclusive_builds.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\toolchain.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\default_pre.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\default_pre.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\resolve_config.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\exclusive_builds_post.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\default_post.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\build_pass.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qml_debug.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\rtti.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\precompile_header.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\warn_on.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qt.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\resources.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\moc.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\opengl.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\uic.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qmake_use.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\file_copies.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\windows.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\testcase_targets.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\exceptions.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\yacc.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\lex.prf ..\FinalProject\FinalProject.pro ..\FinalProject\resources.qrc D:\Installs\Qt\5.8\msvc2013_64\lib\qtmaind.prl D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Widgetsd.prl D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Guid.prl D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Cored.prl   ..\FinalProject\resources.qrc D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\data\dummy.cpp ..\FinalProject\head.h ..\FinalProject\body.h ..\FinalProject\rightarm.h ..\FinalProject\leftarm.h ..\FinalProject\rightleg.h ..\FinalProject\leftleg.h ..\FinalProject\main.cpp ..\FinalProject\hangman.cpp ..\FinalProject\head.cpp ..\FinalProject\body.cpp ..\FinalProject\rightarm.cpp ..\FinalProject\leftarm.cpp ..\FinalProject\rightleg.cpp ..\FinalProject\leftleg.cpp     
+	$(ZIP) FinalProject.zip $(SOURCES) $(DIST) ..\FinalProject\FinalProject.pro D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\spec_pre.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\common\angle.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\common\msvc-base.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\common\msvc-desktop.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\qconfig.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dcore.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dextras.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dinput.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dlogic.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquick.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3drender.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_3drender_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axbase.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axbase_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axcontainer.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axserver.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_axserver_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_bluetooth.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_charts.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_charts_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_clucene_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_concurrent.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_core.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_core_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_datavisualization.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_dbus.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_dbus_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_designer.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_designer_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gamepad.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gui.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_gui_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_help.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_help_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_location.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_location_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimedia.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_network.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_network_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_networkauth.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_networkauth_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_nfc.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_nfc_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_opengl.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_opengl_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_openglextensions.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_positioning.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_positioning_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_printsupport.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_purchasing.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_purchasing_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qml.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qml_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmltest.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quick.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quick_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_script.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_script_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scripttools.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scripttools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scxml.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_scxml_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sensors.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sensors_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialbus.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialport.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_serialport_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sql.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_sql_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_svg.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_svg_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_testlib.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_testlib_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_texttospeech.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_uiplugin.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_uitools.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_uitools_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_webchannel.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_websockets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_websockets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_widgets.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_widgets_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_winextras.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_winextras_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xml.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xml_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\modules\qt_lib_zlib_private.pri D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qt_functions.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qt_config.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\win32-msvc2013\qmake.conf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\spec_post.prf .qmake.stash D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\exclusive_builds.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\toolchain.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\default_pre.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\default_pre.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\resolve_config.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\exclusive_builds_post.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\default_post.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\build_pass.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qml_debug.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\rtti.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\precompile_header.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\warn_on.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qt.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\resources.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\moc.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\opengl.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\uic.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\qmake_use.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\file_copies.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\win32\windows.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\testcase_targets.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\exceptions.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\yacc.prf D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\lex.prf ..\FinalProject\FinalProject.pro ..\FinalProject\resources.qrc D:\Installs\Qt\5.8\msvc2013_64\lib\qtmaind.prl D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Widgetsd.prl D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Guid.prl D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Cored.prl   ..\FinalProject\resources.qrc D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\data\dummy.cpp ..\FinalProject\head.h ..\FinalProject\body.h ..\FinalProject\rightarm.h ..\FinalProject\leftarm.h ..\FinalProject\rightleg.h ..\FinalProject\leftleg.h ..\FinalProject\hangman.h ..\FinalProject\guesses.h ..\FinalProject\noose.h ..\FinalProject\main.cpp ..\FinalProject\hangman.cpp ..\FinalProject\head.cpp ..\FinalProject\body.cpp ..\FinalProject\rightarm.cpp ..\FinalProject\leftarm.cpp ..\FinalProject\rightleg.cpp ..\FinalProject\leftleg.cpp ..\FinalProject\guesses.cpp ..\FinalProject\noose.cpp     
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\main.obj debug\hangman.obj debug\head.obj debug\body.obj debug\rightarm.obj debug\leftarm.obj debug\rightleg.obj debug\leftleg.obj debug\qrc_resources.obj debug\moc_head.obj debug\moc_body.obj debug\moc_rightarm.obj debug\moc_leftarm.obj debug\moc_rightleg.obj debug\moc_leftleg.obj
+	-$(DEL_FILE) debug\main.obj debug\hangman.obj debug\head.obj debug\body.obj debug\rightarm.obj debug\leftarm.obj debug\rightleg.obj debug\leftleg.obj debug\guesses.obj debug\noose.obj debug\qrc_resources.obj debug\moc_head.obj debug\moc_body.obj debug\moc_rightarm.obj debug\moc_leftarm.obj debug\moc_rightleg.obj debug\moc_leftleg.obj debug\moc_noose.obj
 	-$(DEL_FILE) debug\FinalProject.exp debug\FinalProject.vc.pdb debug\FinalProject.ilk debug\FinalProject.idb
 
 distclean: clean 
@@ -198,6 +209,7 @@ compiler_rcc_clean:
 debug\qrc_resources.cpp: ..\FinalProject\resources.qrc \
 		D:\Installs\Qt\5.8\msvc2013_64\bin\rcc.exe \
 		..\FinalProject\trojan_leg_left.png \
+		..\FinalProject\trojan_field.png \
 		..\FinalProject\trojan_leg_right.png \
 		..\FinalProject\trojan_noose.png \
 		..\FinalProject\trojan_head.png \
@@ -212,9 +224,9 @@ compiler_moc_predefs_clean:
 debug\moc_predefs.h: D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\data\dummy.cpp
 	cl -BxD:\Installs\Qt\5.8\msvc2013_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zi -MDd -GR -W3 -w34100 -w34189 -w44996 -E -Za D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\data\dummy.cpp 2>NUL >debug\moc_predefs.h
 
-compiler_moc_header_make_all: debug\moc_head.cpp debug\moc_body.cpp debug\moc_rightarm.cpp debug\moc_leftarm.cpp debug\moc_rightleg.cpp debug\moc_leftleg.cpp
+compiler_moc_header_make_all: debug\moc_head.cpp debug\moc_body.cpp debug\moc_rightarm.cpp debug\moc_leftarm.cpp debug\moc_rightleg.cpp debug\moc_leftleg.cpp debug\moc_noose.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_head.cpp debug\moc_body.cpp debug\moc_rightarm.cpp debug\moc_leftarm.cpp debug\moc_rightleg.cpp debug\moc_leftleg.cpp
+	-$(DEL_FILE) debug\moc_head.cpp debug\moc_body.cpp debug\moc_rightarm.cpp debug\moc_leftarm.cpp debug\moc_rightleg.cpp debug\moc_leftleg.cpp debug\moc_noose.cpp
 debug\moc_head.cpp: D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsitem.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgetsglobal.h \
@@ -773,6 +785,99 @@ debug\moc_leftleg.cpp: D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphic
 		D:\Installs\Qt\5.8\msvc2013_64\bin\moc.exe
 	D:\Installs\Qt\5.8\msvc2013_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include debug/moc_predefs.h -ID:/Installs/Qt/5.8/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Emily/Desktop/Final-Project_10c/FinalProject -ID:/Installs/Qt/5.8/msvc2013_64/include -ID:/Installs/Qt/5.8/msvc2013_64/include/QtWidgets -ID:/Installs/Qt/5.8/msvc2013_64/include/QtGui -ID:/Installs/Qt/5.8/msvc2013_64/include/QtANGLE -ID:/Installs/Qt/5.8/msvc2013_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\8.1\include\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\winrt" ..\FinalProject\leftleg.h -o debug\moc_leftleg.cpp
 
+debug\moc_noose.cpp: D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsitem.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtguiglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig-bootstrapped.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtcore-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsystemdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qprocessordetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcompilerdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypeinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsysinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlogging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qflags.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypetraits.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbasicatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_bootstrap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qgenericatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_cxx11.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_msvc.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobalstatic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmutex.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnumeric.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qversiontagging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtgui-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnamespace.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstring.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qchar.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrefcount.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qarraydata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringbuilder.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qalgorithms.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiterator.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhashfunctions.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpair.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearraylist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qregexp.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringmatcher.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcoreevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qscopedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmetatype.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvarlengtharray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontainerfwd.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhash.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiodevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qshareddata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvector.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpoint.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrect.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmargins.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsize.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpainterpath.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qmatrix.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpolygon.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qregion.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdatastream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qline.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpaintdevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcolor.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgb.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgba64.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qimage.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixelformat.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtransform.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QObject \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsItem \
+		..\FinalProject\noose.h \
+		debug\moc_predefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\bin\moc.exe
+	D:\Installs\Qt\5.8\msvc2013_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include debug/moc_predefs.h -ID:/Installs/Qt/5.8/msvc2013_64/mkspecs/win32-msvc2013 -IC:/Users/Emily/Desktop/Final-Project_10c/FinalProject -ID:/Installs/Qt/5.8/msvc2013_64/include -ID:/Installs/Qt/5.8/msvc2013_64/include/QtWidgets -ID:/Installs/Qt/5.8/msvc2013_64/include/QtGui -ID:/Installs/Qt/5.8/msvc2013_64/include/QtANGLE -ID:/Installs/Qt/5.8/msvc2013_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE" -I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\8.1\include\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\winrt" ..\FinalProject\noose.h -o debug\moc_noose.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
 compiler_uic_make_all:
@@ -901,6 +1006,7 @@ debug\main.obj: ..\FinalProject\main.cpp D:\Installs\Qt\5.8\msvc2013_64\include\
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpen.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsItem \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsitem.h \
+		../FinalProject/hangman.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsView \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsview.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpainter.h \
@@ -908,11 +1014,151 @@ debug\main.obj: ..\FinalProject\main.cpp D:\Installs\Qt\5.8\msvc2013_64\include\
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qscrollarea.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qframe.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QTimer \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtimer.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbasictimer.h
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QWidget \
+		../FinalProject/head.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QObject \
+		../FinalProject/body.h \
+		..\FinalProject\rightArm.h \
+		..\FinalProject\leftArm.h \
+		..\FinalProject\rightLeg.h \
+		..\FinalProject\leftLeg.h \
+		../FinalProject/guesses.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsTextItem
 
-debug\hangman.obj: ..\FinalProject\hangman.cpp 
+debug\hangman.obj: ..\FinalProject\hangman.cpp ../FinalProject/hangman.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsView \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsview.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtguiglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig-bootstrapped.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtcore-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsystemdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qprocessordetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcompilerdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypeinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsysinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlogging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qflags.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypetraits.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbasicatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_bootstrap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qgenericatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_cxx11.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_msvc.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobalstatic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmutex.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnumeric.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qversiontagging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtgui-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmetatype.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrefcount.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnamespace.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qarraydata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstring.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qchar.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringbuilder.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvarlengtharray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontainerfwd.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qalgorithms.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpainter.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrect.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmargins.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsize.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpoint.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qscopedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpaintdevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcolor.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgb.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiterator.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhashfunctions.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpair.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearraylist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qregexp.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringmatcher.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgba64.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qshareddata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhash.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcoreevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qimage.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixelformat.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtransform.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qmatrix.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpolygon.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvector.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qregion.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdatastream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiodevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qline.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpainterpath.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtextoption.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpen.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qbrush.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfontinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfont.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfontmetrics.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qscrollarea.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qframe.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qwidget.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpalette.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qsizepolicy.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcursor.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qkeysequence.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurlquery.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfile.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfiledevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qvector2d.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtouchdevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsscene.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsScene \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QWidget \
+		../FinalProject/head.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsitem.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QObject \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsItem \
+		../FinalProject/body.h \
+		..\FinalProject\rightArm.h \
+		..\FinalProject\leftArm.h \
+		..\FinalProject\rightLeg.h \
+		..\FinalProject\leftLeg.h \
+		../FinalProject/guesses.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsTextItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QFont \
+		../FinalProject/leftarm.h \
+		../FinalProject/rightarm.h \
+		../FinalProject/leftleg.h \
+		../FinalProject/rightleg.h \
+		../FinalProject/noose.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QBrush \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QImage \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QPalette
 
 debug\head.obj: ..\FinalProject\head.cpp ../FinalProject/head.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
@@ -1126,7 +1372,9 @@ debug\body.obj: ..\FinalProject\body.cpp ../FinalProject/body.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfile.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfiledevice.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qvector2d.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtouchdevice.h
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtouchdevice.h \
+		../FinalProject/guesses.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsTextItem
 
 debug\rightarm.obj: ..\FinalProject\rightarm.cpp ..\FinalProject\rightArm.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
@@ -1556,6 +1804,215 @@ debug\leftleg.obj: ..\FinalProject\leftleg.cpp ..\FinalProject\leftLeg.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qvector2d.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtouchdevice.h
 
+debug\guesses.obj: ..\FinalProject\guesses.cpp ../FinalProject/guesses.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsTextItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsitem.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtguiglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig-bootstrapped.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtcore-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsystemdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qprocessordetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcompilerdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypeinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsysinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlogging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qflags.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypetraits.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbasicatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_bootstrap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qgenericatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_cxx11.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_msvc.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobalstatic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmutex.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnumeric.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qversiontagging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtgui-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnamespace.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstring.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qchar.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrefcount.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qarraydata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringbuilder.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qalgorithms.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiterator.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhashfunctions.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpair.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearraylist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qregexp.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringmatcher.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcoreevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qscopedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmetatype.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvarlengtharray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontainerfwd.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhash.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiodevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qshareddata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvector.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpoint.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrect.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmargins.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsize.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpainterpath.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qmatrix.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpolygon.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qregion.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdatastream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qline.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpaintdevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcolor.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgb.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgba64.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qimage.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixelformat.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtransform.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QFont \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfont.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QString \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsScene \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsscene.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qbrush.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpen.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QDebug \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QKeyEvent \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qkeysequence.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurlquery.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfile.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfiledevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qvector2d.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtouchdevice.h \
+		../FinalProject/body.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QObject \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsItem \
+		../FinalProject/head.h \
+		../FinalProject/leftarm.h \
+		../FinalProject/rightarm.h \
+		../FinalProject/leftleg.h \
+		../FinalProject/rightleg.h
+
+debug\noose.obj: ..\FinalProject\noose.cpp ../FinalProject/noose.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsPixmapItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsitem.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtguiglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobal.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig-bootstrapped.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtcore-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsystemdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qprocessordetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcompilerdetection.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypeinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsysinfo.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlogging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qflags.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtypetraits.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbasicatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_bootstrap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qgenericatomic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_cxx11.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qatomic_msvc.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobalstatic.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmutex.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnumeric.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qversiontagging.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtgui-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnamespace.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstring.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qchar.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrefcount.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qarraydata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringbuilder.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qalgorithms.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiterator.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhashfunctions.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpair.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearraylist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringlist.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qregexp.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringmatcher.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcoreevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qscopedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmetatype.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvarlengtharray.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontainerfwd.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhash.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiodevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qshareddata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvector.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpoint.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrect.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmargins.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsize.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpainterpath.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qmatrix.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpolygon.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qregion.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdatastream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qline.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpaintdevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcolor.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgb.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgba64.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qimage.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixelformat.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtransform.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QObject \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsScene \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsscene.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qbrush.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfont.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpen.h
+
 debug\qrc_resources.obj: debug\qrc_resources.cpp 
 
 debug\moc_head.obj: debug\moc_head.cpp 
@@ -1569,6 +2026,8 @@ debug\moc_leftarm.obj: debug\moc_leftarm.cpp
 debug\moc_rightleg.obj: debug\moc_rightleg.cpp 
 
 debug\moc_leftleg.obj: debug\moc_leftleg.cpp 
+
+debug\moc_noose.obj: debug\moc_noose.cpp 
 
 ####### Install
 

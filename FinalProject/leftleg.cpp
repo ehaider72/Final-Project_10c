@@ -7,10 +7,9 @@
 //falling limbs
 
 leftLeg::leftLeg(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent){
-    setPos(100,500);
+    setPos(255,355);
 
     setPixmap(QPixmap(":/Images/trojan_leg_left.png"));
-    setTransformOriginPoint(50,50);
-    setRotation(180);
+
 }
 

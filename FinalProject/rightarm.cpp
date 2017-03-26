@@ -7,11 +7,10 @@
 //falling limbs
 
 rightArm::rightArm(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent){
-    setPos(100,500);
+    setPos(365,195);
 
     setPixmap(QPixmap(":/Images/trojan_arm_right.png"));
-    setTransformOriginPoint(50,50);
-    setRotation(180);
+
 }
 
 

@@ -30,7 +30,9 @@ SOURCES += main.cpp \
     rightarm.cpp \
     leftarm.cpp \
     rightleg.cpp \
-    leftleg.cpp
+    leftleg.cpp \
+    guesses.cpp \
+    noose.cpp
 
 HEADERS  += \
     head.h \
@@ -39,7 +41,9 @@ HEADERS  += \
     leftarm.h \
     rightleg.h \
     leftleg.h \
-    hangman.h
+    hangman.h \
+    guesses.h \
+    noose.h
 
 FORMS    +=
 

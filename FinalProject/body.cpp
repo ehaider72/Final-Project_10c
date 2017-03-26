@@ -3,14 +3,13 @@
 //#include <QDebug>
 #include <QGraphicsScene>
 #include <QList>
+#include "guesses.h"
 
 //falling limbs
 
 body::body(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent){
-    setPos(100,500);
+    setPos(280,245);
 
     setPixmap(QPixmap(":/Images/trojan_body.png"));
-    setTransformOriginPoint(50,50);
-    setRotation(180);
 }
 

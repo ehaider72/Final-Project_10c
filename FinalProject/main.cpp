@@ -2,14 +2,23 @@
 #include <QGraphicsScene>
 #include <QGraphicsItem> //all objects in the scene are derived from this class
 #include <QApplication>
-#include "hangman.h
-
+#include "hangman.h"
 
 #include <QGraphicsView>
-//#include <QGraphicsRectItem>
-//#include "myrect.h"
-#include <QTimer>
 
+hangman * game;
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    game = new hangman();
+    game->show();
+
+    return a.exec();
+}
+
+/*
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -46,3 +55,4 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
+*/
