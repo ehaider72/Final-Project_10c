@@ -9,4 +9,5 @@
         <file>trojan_noose.png</file>
         <file>trojan_field.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

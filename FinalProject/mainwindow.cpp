@@ -1,4 +1,4 @@
-#include <Application>
+//#include <Application>
 #include <QGraphicsScene>
 #include <QGraphicsItem>
 #include <QGraphicsView>

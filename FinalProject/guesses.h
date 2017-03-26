@@ -10,8 +10,8 @@ public:
     void printGuesses();
     QString setupUnsolved(QString phrase);
     QString updateUnsolved(QString phrase, QString unsolved);
-    void keyPressEvent(QKeyEvent *event);
     void guessProceedure();
+    void keyPressEvent(QKeyEvent *event);
 
 private:
     int num; //how many (incorrect) guesses have been made
@@ -21,6 +21,7 @@ private:
     QString unsolved; //phrase replaced by '-'
     bool solved; //was the word guessed correctly?
     bool correctGuess;
+
 };
 
 

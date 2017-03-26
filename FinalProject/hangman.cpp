@@ -13,6 +13,8 @@
 #include <QImage>
 #include <QPalette>
 
+const int maxGuesses = 6; //6 body parts
+
 hangman::hangman(QWidget * parent){
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
@@ -26,8 +28,11 @@ hangman::hangman(QWidget * parent){
 
     noose* trojanNoose = new noose();
     scene->addItem(trojanNoose);
-   // Guesses *guesses = new Guesses();
-   // scene->addItem(guesses);
+
+    Guesses *guesses = new Guesses();
+    scene->addItem(guesses);
+
+
     head* trojanHead = new head();
     scene->addItem(trojanHead);
     body* trojanBody = new body();

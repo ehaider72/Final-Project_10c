@@ -1024,7 +1024,14 @@ release\main.obj: ..\FinalProject\main.cpp D:\Installs\Qt\5.8\msvc2013_64\includ
 		..\FinalProject\rightLeg.h \
 		..\FinalProject\leftLeg.h \
 		../FinalProject/guesses.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsTextItem
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsTextItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QSplashScreen \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qsplashscreen.h \
+		..\FinalProject\mainwindow.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QMainWindow \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qmainwindow.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtabwidget.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qicon.h
 
 release\hangman.obj: ..\FinalProject\hangman.cpp ../FinalProject/hangman.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsView \

@@ -3,14 +3,25 @@
 #include <QGraphicsItem> //all objects in the scene are derived from this class
 #include <QApplication>
 #include "hangman.h"
+#include <QSplashScreen>
+#include "mainwindow.h"
+
 
 #include <QGraphicsView>
+
+//QTimer timer = new QTimer();
+
 
 hangman * game;
 
 int main(int argc, char *argv[])
 {
+   // QSplashScreen *splash = new QSplashScreen();
+    //splash->showMessage("Welcome to Hangman!",int allignment = Qt::AlignCenter,const QColor& color = Qt::white);
+
     QApplication a(argc, argv);
+
+
 
     game = new hangman();
     game->show();

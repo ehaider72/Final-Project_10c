@@ -14,64 +14,31 @@
 #include "rightarm.h"
 #include "leftleg.h"
 #include "rightleg.h"
+#include <QInputDialog>
 
-//extern head *trojanHead;
+
 const int maxGuesses = 6; //6 body parts
 
 Guesses::Guesses(QGraphicsItem * parent) : QGraphicsTextItem(parent){
+
     num = 0; //initial number of letters guessed
-    std::string str;
-    std::cout << "Enter a phrase that your friend can guess: ";
-    std::getline(std::cin, str);
-    QString phrase(str.c_str());
+    solved = false; //the phrase is unknown
+
+
+    //std::string str;
+  //  phrase = QInputDialog::getText(this, tr("Enter a phrase for your friend:"),tr("Phrase:"),QLineEdit::Normal,tr(""), &ok);
+   // std::cout << "Enter a phrase that your friend can guess: ";
+   // std::getline(std::cin, str);
+    //QString phrase(str.c_str());
     QString guesses("");
-    setupUnsolved(phrase);
-    solved = false;
 
-   setPlainText(QString("Incorrect Guesses: "));
-   setDefaultTextColor(Qt::red);
-   setFont(QFont("times",16));
-}
-/*
-void Guesses::guessProceedure()
-{
-    if (!correctGuess){ //add a limb
-        num++;
-        if (num == 1)
-        {
-           head bodyPart = new head();
-        }
-        else if(num == 2)
-        {
-            body * bodyPart = new body();
-        }
-       else if(num == 3){
-            rightArm *bodyPart = new rightArm();
-        }
-        else if (num == 4)
-        {
-            leftArm* bodyPart = new leftArm();
-        }
-        else if (num == 5){
-            rightLeg *bodyPart = new rightLeg();
-        }
-        else if (num == 6){
-            leftLeg* bodyPart = new leftLeg();
-        }
-        else
-        {
-            qDebug() << "You lose! "; //you lose
-          //  delete trojanHead;
-         //   delete trojanBody;
-          //  delete trojanRArm;
-           // delete trojanLArm;
-           // delete trojanRLeg;
-            //delete trojanLLeg;
-        }
+    setPlainText(QString(setupUnsolved(phrase)));
 
+    setPlainText(QString("Incorrect Guesses: "));
+    setDefaultTextColor(Qt::white);
+    setFont(QFont("times",16));
 }
 
-*/
 void Guesses::printGuesses()
 {
  setPlainText(QString("Incorrect Guesses: ") + QString(currentGuess));
@@ -112,44 +79,89 @@ QString Guesses::updateUnsolved(QString phrase, QString unsolved) //1.check if a
     return unsolved;
 }
 
-
-
 void Guesses::keyPressEvent(QKeyEvent *event){
-    if (event->key() == Qt::Key_A){
-        currentGuess = "a";
-        updateUnsolved(phrase,unsolved);
-        if (solved){qDebug() << "You win! ";}
+    switch (event->key()){
+    case Qt::Key_A:
+        currentGuess = "A";
+        break;
+    case Qt::Key_B:
+        currentGuess = "B";
+        break;
+    case Qt::Key_C:
+        currentGuess = "C";
+        break;
+    case Qt::Key_D:
+        currentGuess = "D";
+        break;
+    case Qt::Key_E:
+        currentGuess = "E";
+        break;
+    case Qt::Key_F:
+        currentGuess = "F";
+        break;
+    case Qt::Key_G:
+        currentGuess = "G";
+        break;
+    case Qt::Key_H:
+        currentGuess = "H";
+        break;
+    case Qt::Key_I:
+        currentGuess = "I";
+        break;
+    case Qt::Key_J:
+        currentGuess = "J";
+        break;
+    case Qt::Key_K:
+        currentGuess = "K";
+        break;
+    case Qt::Key_L:
+        currentGuess = "L";
+        break;
+    case Qt::Key_M:
+        currentGuess = "M";
+        break;
+    case Qt::Key_N:
+        currentGuess = "N";
+        break;
+    case Qt::Key_O:
+        currentGuess = "O";
+        break;
+    case Qt::Key_P:
+        currentGuess = "P";
+        break;
+    case Qt::Key_Q:
+        currentGuess = "Q";
+        break;
+    case Qt::Key_R:
+        currentGuess = "R";
+        break;
+    case Qt::Key_S:
+        currentGuess = "S";
+        break;
+    case Qt::Key_T:
+        currentGuess = "T";
+        break;
+    case Qt::Key_U:
+        currentGuess = "U";
+        break;
+    case Qt::Key_V:
+        currentGuess = "V";
+        break;
+    case Qt::Key_W:
+        currentGuess = "W";
+        break;
+    case Qt::Key_X:
+        currentGuess = "X";
+        break;
+    case Qt::Key_Y:
+        currentGuess = "Y";
+        break;
+    case Qt::Key_Z:
+        currentGuess = "Z";
+        break;
     }
-/*
-    else if (event->key() == Qt::Key_B) {
-    //    currentGuess = b;
-    }
-    else if (event->key() == Qt::Key_C) {
-
-    }
-    else if (event->key() == Qt::Key_D) {}
-    else if (event->key() == Qt::Key_E) {}
-    else if (event->key() == Qt::Key_F) {}
-    else if (event->key() == Qt::Key_G) {}
-    else if (event->key() == Qt::Key_H) {}
-    else if (event->key() == Qt::Key_I) {}
-    else if (event->key() == Qt::Key_J) {}
-    else if (event->key() == Qt::Key_K) {}
-    else if (event->key() == Qt::Key_L) {}
-    else if (event->key() == Qt::Key_M) {}
-    else if (event->key() == Qt::Key_N) {}
-    else if (event->key() == Qt::Key_O) {}
-    else if (event->key() == Qt::Key_P) {}
-    else if (event->key() == Qt::Key_Q) {}
-    else if (event->key() == Qt::Key_R) {}
-    else if (event->key() == Qt::Key_S) {}
-    else if (event->key() == Qt::Key_T) {}
-    else if (event->key() == Qt::Key_U) {}
-    else if (event->key() == Qt::Key_V) {}
-    else if (event->key() == Qt::Key_W) {}
-    else if (event->key() == Qt::Key_X) {}
-    else if (event->key() == Qt::Key_Y) {}
-    else if (event->key() == Qt::Key_Z) {}*/
 }
+
+
 
 
