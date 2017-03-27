@@ -1,10 +1,7 @@
-#include "leftLeg.h"
-#include <QTimer>
-//#include <QDebug>
 #include <QGraphicsScene>
-#include <QList>
 
-//falling limbs
+#include "leftLeg.h"
+
 
 leftLeg::leftLeg(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent){
     setPos(255,355);

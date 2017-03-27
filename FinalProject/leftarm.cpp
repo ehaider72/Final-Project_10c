@@ -1,10 +1,6 @@
-#include "leftArm.h"
-#include <QTimer>
-//#include <QDebug>
 #include <QGraphicsScene>
-#include <QList>
 
-//falling limbs
+#include "leftArm.h"
 
 leftArm::leftArm(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent){
     setPos(210,275);

@@ -1,21 +1,30 @@
-#include "hangman.h"
 #include <QGraphicsTextItem>
 #include <QFont>
-#include "body.h"
-#include "guesses.h"
-#include "head.h"
-#include "leftarm.h"
-#include "rightarm.h"
-#include "leftleg.h"
-#include "rightleg.h"
-#include "noose.h"
 #include <QBrush>
-#include <QImage>
-#include <QPalette>
+#include <QTimer>
+#include <QDebug>
+
+#include "hangman.h"
+#include "head.h"
+#include "body.h"
+#include "rightarm.h"
+#include "leftarm.h"
+#include "rightleg.h"
+#include "leftleg.h"
+#include "noose.h"
+#include "guesses.h"
+#include "phrases.h"
+
+#include "form.h"
+#include "mainwindow.h"
 
 const int maxGuesses = 6; //6 body parts
 
-hangman::hangman(QWidget * parent){
+hangman::hangman(QWidget * parent) {
+
+    Form *f = new Form();
+    f->show();
+
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
 
@@ -26,13 +35,40 @@ hangman::hangman(QWidget * parent){
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(800,600); //whats this do
 
-    noose* trojanNoose = new noose();
-    scene->addItem(trojanNoose);
+    myNoose = new noose();
+    scene->addItem(myNoose);
 
-    Guesses *guesses = new Guesses();
-    scene->addItem(guesses);
+    myGuesses = new Guesses();
+   // test->setPhrase(f->returnPhrase ());
+    //test->setupUnsolved(test->returnphrase());
+
+    myPhrase = new Phrases();
+
+    QTimer * timer = new QTimer();
+    QObject::connect(timer,SIGNAL(timeout()),myPhrase,SLOT(updateUnsolved()));
+
+    //QObject::connect(f, SIGNAL(clicked()), word,SLOT(setupUnsolved()));
+    //QObject::connect(f, SIGNAL(clicked()), word,SLOT(setupUnsolved(f->returnPhrase())));
+    myPhrase->setPhrase(f->returnPhrase());
 
 
+
+
+    //word->setupUnsolved(word->returnphrase());
+
+    scene->addItem(myPhrase);
+    //word->printUnsolved();
+    //QTimer * timer = new QTimer();
+
+    //timer->start(20);
+
+
+
+
+
+    scene->addItem(myGuesses);
+
+/*
     head* trojanHead = new head();
     scene->addItem(trojanHead);
     body* trojanBody = new body();
@@ -45,11 +81,13 @@ hangman::hangman(QWidget * parent){
     scene->addItem(trojanRLeg);
     leftLeg* trojanLLeg = new leftLeg();
     scene->addItem(trojanLLeg);
-
+*/
 
 //guesses*/
 
 show();
+//qDebug()<< test->returnphrase();
+
 }
 
 

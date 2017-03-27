@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-//#inc
+#include <QString>
 
 namespace Ui {
 class MainWindow;
@@ -15,8 +15,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    //void chnageTitle(QString newTitle);
-
+    void changeTitle(QString newTitle);
 private:
     Ui::MainWindow *ui;
 };

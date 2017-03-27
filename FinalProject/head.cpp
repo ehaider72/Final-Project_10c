@@ -1,10 +1,6 @@
-#include "head.h"
-#include <QTimer>
-//#include <QDebug>
 #include <QGraphicsScene>
-#include <QList>
 
-//falling limbs
+#include "head.h"
 
 head::head(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent){
     setPos(275,100);

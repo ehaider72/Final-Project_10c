@@ -11,8 +11,11 @@
 #include "rightLeg.h"
 #include "leftLeg.h"
 #include "guesses.h"
+#include "phrases.h"
+#include "noose.h"
 
-class hangman : public QGraphicsView{
+class hangman :  public QGraphicsView{
+    Q_OBJECT
 public:
     hangman(QWidget * parent = 0);
     QGraphicsScene * scene;
@@ -24,6 +27,11 @@ public:
     leftLeg * myLLeg;
     rightLeg * myRLeg;
     Guesses * myGuesses;
+    Phrases * myPhrase;
+    noose * myNoose;
+
+
+    void doStuff();
 };
 
 #endif // HANGMAN_H

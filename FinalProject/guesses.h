@@ -2,25 +2,32 @@
 #define GUESSES_H
 
 #include <QGraphicsTextItem>
-//#include <string>
+#include <QObject>
+
+#include "ui_form.h"
+#include "form.h"
 
 class Guesses : public QGraphicsTextItem{
+    Q_OBJECT
 public:
+
     Guesses(QGraphicsItem * parent = 0 );
+
     void printGuesses();
-    QString setupUnsolved(QString phrase);
-    QString updateUnsolved(QString phrase, QString unsolved);
-    void guessProceedure();
     void keyPressEvent(QKeyEvent *event);
+    QString getCurrentGuess();
+
+//signals:
+//    void guessStarted();
+//public slots:
+//    void getPhrase();
+
 
 private:
-    int num; //how many (incorrect) guesses have been made
-    QString currentGuess; //current guess (ex 'A')
-    QString phrase; //the entered phrase
-    QString guesses; //list of incorrect guesses
-    QString unsolved; //phrase replaced by '-'
-    bool solved; //was the word guessed correctly?
+    int num = 0;             //how many (incorrect) guesses have been made
     bool correctGuess;
+    QString currentGuess = "";//current guess (ex 'A')
+    QString guesses = "";     //list of incorrect guesses
 
 };
 

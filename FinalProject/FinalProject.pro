@@ -32,7 +32,9 @@ SOURCES += main.cpp \
     rightleg.cpp \
     leftleg.cpp \
     guesses.cpp \
-    noose.cpp
+    noose.cpp \
+    form.cpp \
+    phrases.cpp
 
 HEADERS  += \
     head.h \
@@ -43,9 +45,14 @@ HEADERS  += \
     leftleg.h \
     hangman.h \
     guesses.h \
-    noose.h
+    noose.h \
+    mainwindow.h \
+    form.h \
+    phrases.h
 
-FORMS    +=
+FORMS    += \
+    mainwindow.ui \
+    form.ui
 
 RESOURCES += \
     resources.qrc

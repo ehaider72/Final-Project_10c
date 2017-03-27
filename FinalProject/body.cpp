@@ -1,8 +1,8 @@
-#include "body.h"
 #include <QTimer>
-//#include <QDebug>
 #include <QGraphicsScene>
 #include <QList>
+
+#include "body.h"
 #include "guesses.h"
 
 //falling limbs
