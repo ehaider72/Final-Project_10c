@@ -13,7 +13,8 @@
 #include "guesses.h"
 #include "phrases.h"
 #include "noose.h"
-
+#include "gameover.h"
+#include "youwin.h"
 class hangman :  public QGraphicsView{
     Q_OBJECT
 public:
@@ -26,12 +27,11 @@ public:
     rightArm * myRArm;
     leftLeg * myLLeg;
     rightLeg * myRLeg;
-   // Guesses * myGuesses;
-  //  Phrases * myPhrase;
     noose * myNoose;
-     Form * f;
-      Phrases* myPhrase;
-    void doStuff();
+    Form * f;
+    Phrases* myPhrase;
+    gameover * over;
+    youwin * win;
 };
 
 #endif // HANGMAN_H

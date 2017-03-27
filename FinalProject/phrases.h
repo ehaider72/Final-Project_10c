@@ -17,27 +17,18 @@ public:
     void setPhrase(QString phrase);
     void setUnsolved(QString un);
     void setupUnsolved();
-    //QString updateUnsolved(Guesses myGuess);
     QString returnphrase();
     bool unsolvedIsSolved();
-
-    //void keyPressEvent(QKeyEvent *event);
+    bool returnsolved();
     Guesses* phraseG= nullptr;
 
-/*
-signals:
-    void guessStarted();
 public slots:
-    void getPhrase();
-*/
-public slots:
-    //void printUnsolved();
-    //void setupUnsolved();// (QString phrase);
     void updateUnsolved();
 
 private:
     QString phrase;
     QString unsolved;
+    bool solved = false;
 };
 
 

@@ -1,5 +1,4 @@
 #include <QGraphicsScene>
-#include <QDebug>
 
 #include "form.h"
 #include "guesses.h"
@@ -33,20 +32,11 @@ void Form::on_pushButton_clicked()
    QString tempformPhrase = ui->lineEdit->text();
    setPhrase(tempformPhrase);
     ui->lineEdit->setText(QString(""));
-
-    qDebug() << "successfully reached on_pushButton_clicked";
-    //formPhrase= 'lol';
-    //this->close();
 }
 
-//void Form:: sendingPhrase(QString word)
-//{
-//    return;
-//}
 
  QString Form::returnPhrase ()
  {
-     qDebug() << "successfuly reached returnPhrase() in form.cpp";
      return formPhrase;
  }
 
@@ -64,21 +54,63 @@ void Form::on_pushButton_2_clicked()
 {
      QString tempformGuess = ui->lineEdit_2->text();
     setGuess(tempformGuess);
-   // Phrases* myPhrase = new Phrases();
 
     game->myPhrase->phraseG->setGuess(returnGuess());
     game->myPhrase->setPhrase(returnPhrase());
-    //game->myPhrase->setupUnsolved(game->myPhrase->returnphrase());
     game->myPhrase->printUnsolved();
     game->myPhrase ->updateUnsolved();
 
     game->scene->addItem(game->myPhrase);
-    qDebug() << " reached head1" <<game->myPhrase->phraseG->getnumguesses();
+    if(game->myPhrase->returnsolved())
+     {
+        if (game->myPhrase->phraseG->getnumguesses() == 1)
+            delete game->myHead;
+        else if (game->myPhrase->phraseG->getnumguesses() == 2)
+        {
+            delete game->myHead;
+            delete game->myBody;
+        }
+        else if (game->myPhrase->phraseG->getnumguesses() == 3)
+        {
+            delete game->myHead;
+            delete game->myBody;
+            delete game->myRArm;
+        }
+        else if (game->myPhrase->phraseG->getnumguesses() == 4)
+        {
+            delete game->myHead;
+            delete game->myBody;
+            delete game->myRArm;
+            delete game->myLArm;
+        }
+        else if (game->myPhrase->phraseG->getnumguesses() == 5)
+        {
+            delete game->myHead;
+            delete game->myBody;
+            delete game->myRArm;
+            delete game->myLArm;
+            delete game->myRLeg;
+        }
+        else if (game->myPhrase->phraseG->getnumguesses() == 6)
+        {
+            delete game->myHead;
+            delete game->myBody;
+            delete game->myRArm;
+            delete game->myLArm;
+            delete game->myRLeg;
+            delete game->myLLeg;
+        }
+
+        game->win = new youwin();
+        game->scene->addItem(game->win);
+    }
+
+
+
     switch (game->myPhrase->phraseG->getnumguesses()){
         case 1:
             game->myHead = new head();
             game->scene->addItem(game->myHead);
-            qDebug() << "successfuly reached head1";
             break;
         case 2:
             game->myBody = new body();
@@ -101,7 +133,11 @@ void Form::on_pushButton_2_clicked()
         case 6:
             game->myLLeg = new leftLeg();
             game->scene->addItem(game->myLLeg);
+            game->over = new gameover();
+            game->scene->addItem(game->over);
             break;
 
     }
+    ui->lineEdit_2->setText(QString(""));
+
 }

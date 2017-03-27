@@ -34,7 +34,9 @@ SOURCES += main.cpp \
     guesses.cpp \
     noose.cpp \
     form.cpp \
-    phrases.cpp
+    phrases.cpp \
+    gameover.cpp \
+    youwin.cpp
 
 HEADERS  += \
     head.h \
@@ -48,7 +50,9 @@ HEADERS  += \
     noose.h \
     mainwindow.h \
     form.h \
-    phrases.h
+    phrases.h \
+    gameover.h \
+    youwin.h
 
 FORMS    += \
     mainwindow.ui \

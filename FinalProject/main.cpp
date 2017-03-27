@@ -11,9 +11,6 @@ hangman * game;
 
 int main(int argc, char *argv[])
 {
-   // QSplashScreen *splash = new QSplashScreen();
-    //splash->showMessage("Welcome to Hangman!",int allignment = Qt::AlignCenter,const QColor& color = Qt::white);
-
     QApplication a(argc, argv);
 
     game = new hangman();

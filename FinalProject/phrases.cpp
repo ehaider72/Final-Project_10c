@@ -2,8 +2,6 @@
 #include <QFont>
 #include <QString>
 #include <QGraphicsScene>
-#include <QDebug>
-#include <QKeyEvent>
 #include <QInputDialog>
 
 #include "head.h"
@@ -23,9 +21,7 @@ extern hangman* game;
 
 Phrases::Phrases(QGraphicsItem * parent) : QGraphicsTextItem(parent){
 
-    qDebug() << "Reached Phrases constructor";
     phraseG = new Guesses();
-   // setPlainText(QString("Unsolved Phrase: "));
     setDefaultTextColor(Qt::white);
     setFont(QFont("times",16));
     setPos(0,540);
@@ -35,13 +31,11 @@ Phrases::Phrases(QGraphicsItem * parent) : QGraphicsTextItem(parent){
 
 void Phrases::printUnsolved(){
     setPlainText(QString("Unsolved Phrase: ") + QString(unsolved));
-    qDebug() << "No problems printing";
 }
 
 void Phrases::setPhrase(QString phrase1)
 {
     phrase = phrase1;
-    qDebug() << "successfully reached setPhrase in phrases.cpp";
 }
 
 void Phrases::setUnsolved(QString un){
@@ -50,50 +44,53 @@ void Phrases::setUnsolved(QString un){
 
 void Phrases::setupUnsolved() //previously was type QString
 {
-    //unsolved = phrase;
-    qDebug()<<"phrae empty" << phrase;
     for (int i = 0; i < phrase.size();i++)
     {
 
         unsolved[i] = '@';
     }
-   //return unsolved;
-
 }
 
 void Phrases::updateUnsolved()
 {
-    //Guesses * guess = new Guesses();
    QString guess = phraseG->getCurrentGuess();
-    qDebug()<<"updateUnolved" << guess[0];
-  int count= 0;
+  int count= 0; //numer of guesses
+  QString temp = "@";
 
     for(int i=0; i<phrase.size(); i++){
         if (phrase[i] == guess[0]){
             unsolved[i] = guess[0];
-            count++;
-    }
+            count++;}
+        else if (!(unsolved[i].isLetter()))
+        {
+            unsolved[i] = temp[0];
+        }
 
     }
+    int cnt = 0;
+    for (int i =0; i<phrase.size();i++){
+        if(unsolved[i].isLetter())
+            cnt++;
+    }
+    if (phrase.size() == cnt)
+        solved = true;
+    else if (phrase.size() != cnt)
+        solved = false;
+
+
     if (count==0){
         phraseG->increaseguess();
-    qDebug()<<"updateUnolve increae guea";
     }
     printUnsolved();
 
 }
 
-bool Phrases::unsolvedIsSolved(){
-        for(int i=0; i<phrase.size(); i++){
-           if (unsolved.at(i) == '-'){
-               return false;
-           }
-        }
-        return true;
-}
-
 QString Phrases::returnphrase()
 {
-    qDebug() << "successfully reached returnphrase in phrases.cpp";
     return phrase;
+}
+
+bool Phrases::returnsolved()
+{
+    return solved;
 }
