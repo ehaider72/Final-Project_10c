@@ -24,15 +24,17 @@ extern hangman* game;
 Phrases::Phrases(QGraphicsItem * parent) : QGraphicsTextItem(parent){
 
     qDebug() << "Reached Phrases constructor";
-
-    setPlainText(QString("Unsolved Phrase: "));
+    phraseG = new Guesses();
+   // setPlainText(QString("Unsolved Phrase: "));
     setDefaultTextColor(Qt::white);
     setFont(QFont("times",16));
     setPos(0,540);
+    setupUnsolved();
+
 }
 
 void Phrases::printUnsolved(){
-    setPlainText(QString("Unsolved Phrase: ") + QString(phrase));
+    setPlainText(QString("Unsolved Phrase: ") + QString(unsolved));
     qDebug() << "No problems printing";
 }
 
@@ -46,27 +48,36 @@ void Phrases::setUnsolved(QString un){
     unsolved = un;
 }
 
-QString Phrases::setupUnsolved(QString myPhrase) //previously was type QString
+void Phrases::setupUnsolved() //previously was type QString
 {
-    unsolved = phrase;//unsolved = myPhrase;
+    //unsolved = phrase;
+    qDebug()<<"phrae empty" << phrase;
     for (int i = 0; i < phrase.size();i++)
     {
 
-        unsolved[i] = '-';
+        unsolved[i] = '@';
     }
-   printUnsolved();
-   return unsolved;
+   //return unsolved;
 
 }
 
-void Phrases::updateUnsolved()  //(Guesses myGuess) //used to be QString
+void Phrases::updateUnsolved()
 {
     //Guesses * guess = new Guesses();
-   QString guess = game->myGuesses->getCurrentGuess();
-    for(int i=0; phrase.size(); i++){
+   QString guess = phraseG->getCurrentGuess();
+    qDebug()<<"updateUnolved" << guess[0];
+  int count= 0;
+
+    for(int i=0; i<phrase.size(); i++){
         if (phrase[i] == guess[0]){
             unsolved[i] = guess[0];
+            count++;
     }
+
+    }
+    if (count==0){
+        phraseG->increaseguess();
+    qDebug()<<"updateUnolve increae guea";
     }
     printUnsolved();
 

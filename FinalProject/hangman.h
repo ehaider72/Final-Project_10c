@@ -26,11 +26,11 @@ public:
     rightArm * myRArm;
     leftLeg * myLLeg;
     rightLeg * myRLeg;
-    Guesses * myGuesses;
-    Phrases * myPhrase;
+   // Guesses * myGuesses;
+  //  Phrases * myPhrase;
     noose * myNoose;
-
-
+     Form * f;
+      Phrases* myPhrase;
     void doStuff();
 };
 

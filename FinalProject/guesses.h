@@ -13,21 +13,22 @@ public:
 
     Guesses(QGraphicsItem * parent = 0 );
 
-    void printGuesses();
-    void keyPressEvent(QKeyEvent *event);
+//    void printGuesses();
+//    void keyPressEvent(QKeyEvent *event);
     QString getCurrentGuess();
-
+    void setGuess(QString g);
+    int getnumguesses ();
+    void increaseguess();
 //signals:
 //    void guessStarted();
 //public slots:
 //    void getPhrase();
 
-
 private:
-    int num = 0;             //how many (incorrect) guesses have been made
+    int num = 0;
     bool correctGuess;
     QString currentGuess = "";//current guess (ex 'A')
-    QString guesses = "";     //list of incorrect guesses
+    //QString guesses = "";     //list of incorrect guesses
 
 };
 

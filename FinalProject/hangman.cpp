@@ -22,7 +22,7 @@ const int maxGuesses = 6; //6 body parts
 
 hangman::hangman(QWidget * parent) {
 
-    Form *f = new Form();
+    f = new Form();
     f->show();
 
     scene = new QGraphicsScene();
@@ -38,25 +38,25 @@ hangman::hangman(QWidget * parent) {
     myNoose = new noose();
     scene->addItem(myNoose);
 
-    myGuesses = new Guesses();
+   // myGuesses = new Guesses();
    // test->setPhrase(f->returnPhrase ());
     //test->setupUnsolved(test->returnphrase());
 
-    myPhrase = new Phrases();
+//    myPhrase = new Phrases();
 
-    QTimer * timer = new QTimer();
-    QObject::connect(timer,SIGNAL(timeout()),myPhrase,SLOT(updateUnsolved()));
+//    QTimer * timer = new QTimer();
+//    QObject::connect(timer,SIGNAL(timeout()),myPhrase,SLOT(updateUnsolved()));
 
     //QObject::connect(f, SIGNAL(clicked()), word,SLOT(setupUnsolved()));
     //QObject::connect(f, SIGNAL(clicked()), word,SLOT(setupUnsolved(f->returnPhrase())));
-    myPhrase->setPhrase(f->returnPhrase());
+   // myPhrase->setPhrase(f->returnPhrase());
 
-
+    myPhrase = new Phrases();
 
 
     //word->setupUnsolved(word->returnphrase());
 
-    scene->addItem(myPhrase);
+//    scene->addItem(myPhrase);
     //word->printUnsolved();
     //QTimer * timer = new QTimer();
 
@@ -66,7 +66,7 @@ hangman::hangman(QWidget * parent) {
 
 
 
-    scene->addItem(myGuesses);
+  //  scene->addItem(myGuesses);
 
 /*
     head* trojanHead = new head();

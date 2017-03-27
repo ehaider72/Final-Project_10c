@@ -16,13 +16,13 @@ public:
     void printUnsolved();
     void setPhrase(QString phrase);
     void setUnsolved(QString un);
-    QString setupUnsolved(QString phrase);
+    void setupUnsolved();
     //QString updateUnsolved(Guesses myGuess);
     QString returnphrase();
     bool unsolvedIsSolved();
 
     //void keyPressEvent(QKeyEvent *event);
-
+    Guesses* phraseG= nullptr;
 
 /*
 signals:
@@ -36,8 +36,8 @@ public slots:
     void updateUnsolved();
 
 private:
-    QString phrase = "";
-    QString unsolved = "";
+    QString phrase;
+    QString unsolved;
 };
 
 
