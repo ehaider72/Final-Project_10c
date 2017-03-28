@@ -40,7 +40,7 @@ public:
         Form->resize(433, 240);
         pushButton = new QPushButton(Form);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(100, 140, 80, 31));
+        pushButton->setGeometry(QRect(90, 140, 101, 31));
         label = new QLabel(Form);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(10, 50, 261, 41));
@@ -54,7 +54,7 @@ public:
         lineEdit->setAlignment(Qt::AlignCenter);
         pushButton_2 = new QPushButton(Form);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(300, 140, 81, 31));
+        pushButton_2->setGeometry(QRect(290, 140, 111, 31));
         label_2 = new QLabel(Form);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(300, 50, 81, 41));
@@ -67,6 +67,7 @@ public:
         lineEdit_2 = new QLineEdit(Form);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setGeometry(QRect(310, 100, 61, 31));
+        lineEdit_2->setAlignment(Qt::AlignCenter);
         label_3 = new QLabel(Form);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(90, 10, 101, 51));
