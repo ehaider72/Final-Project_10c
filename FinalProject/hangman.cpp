@@ -2,7 +2,6 @@
 #include <QFont>
 #include <QBrush>
 #include <QTimer>
-
 #include "hangman.h"
 #include "head.h"
 #include "body.h"

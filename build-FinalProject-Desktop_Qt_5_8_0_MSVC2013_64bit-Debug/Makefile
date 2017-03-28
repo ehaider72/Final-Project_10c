@@ -237,8 +237,10 @@ Makefile: ..\FinalProject\FinalProject.pro D:\Installs\Qt\5.8\msvc2013_64\mkspec
 		D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\lex.prf \
 		..\FinalProject\FinalProject.pro \
 		D:\Installs\Qt\5.8\msvc2013_64\lib\qtmaind.prl \
+		D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Multimedia.prl \
 		D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Widgets.prl \
 		D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Gui.prl \
+		D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Network.prl \
 		D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Core.prl
 	$(QMAKE) -o Makefile ..\FinalProject\FinalProject.pro -spec win32-msvc2013 "CONFIG+=debug" "CONFIG+=qml_debug"
 D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\spec_pre.prf:
@@ -405,8 +407,10 @@ D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\yacc.prf:
 D:\Installs\Qt\5.8\msvc2013_64\mkspecs\features\lex.prf:
 ..\FinalProject\FinalProject.pro:
 D:\Installs\Qt\5.8\msvc2013_64\lib\qtmaind.prl:
+D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Multimedia.prl:
 D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Widgets.prl:
 D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Gui.prl:
+D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Network.prl:
 D:\Installs\Qt\5.8\msvc2013_64\lib\Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\FinalProject\FinalProject.pro -spec win32-msvc2013 "CONFIG+=debug" "CONFIG+=qml_debug"

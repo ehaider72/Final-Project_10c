@@ -9,5 +9,9 @@
         <file>trojan_noose.png</file>
         <file>trojan_field.png</file>
     </qresource>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>Large_Stadium_Applause.mp3</file>
+        <file>gameover.mp3</file>
+        <file>frogger-music.mp3</file>
+    </qresource>
 </RCC>
