@@ -29,7 +29,7 @@ void Form::setPhrase(QString word)
 
 void Form::on_pushButton_clicked()
 {
-   QString tempformPhrase = ui->lineEdit->text();
+   QString tempformPhrase = ui->lineEdit->text();   //sets word as phrase
    setPhrase(tempformPhrase);
     ui->lineEdit->setText(QString(""));
 }
@@ -61,27 +61,80 @@ void Form::on_pushButton_2_clicked()
     game->myPhrase ->updateUnsolved();
 
     game->scene->addItem(game->myPhrase);
+
+
+
+if (game->myPhrase->phraseG->incorrectGuess){
+    switch (game->myPhrase->phraseG->getnumguesses()){
+        case 1:
+
+            game->myHead = new head();
+            game->scene->addItem(game->myHead);
+            break;
+        case 2:
+
+            game->myBody = new body();
+            game->scene->addItem(game->myBody);
+            break;
+        case 3:
+
+            game->myRArm = new rightArm();
+            game->scene->addItem(game->myRArm);
+            break;
+
+        case 4:
+
+            game->myLArm = new leftArm();
+            game->scene->addItem(game->myLArm);
+            break;
+
+        case 5:
+            game->myRLeg = new rightLeg();
+            game->scene->addItem(game->myRLeg);
+            break;
+        case 6:
+            game->myLLeg = new leftLeg();
+            game->scene->addItem(game->myLLeg);
+            game->over = new gameover();
+            game->scene->addItem(game->over);
+            break;
+
+    }
+}
+
     if(game->myPhrase->returnsolved())
      {
         if (game->myPhrase->phraseG->getnumguesses() == 1)
+        {
             delete game->myHead;
+
+        }
         else if (game->myPhrase->phraseG->getnumguesses() == 2)
         {
             delete game->myHead;
+
             delete game->myBody;
+
         }
         else if (game->myPhrase->phraseG->getnumguesses() == 3)
         {
             delete game->myHead;
+
             delete game->myBody;
+
             delete game->myRArm;
+
         }
         else if (game->myPhrase->phraseG->getnumguesses() == 4)
         {
             delete game->myHead;
+
             delete game->myBody;
+
             delete game->myRArm;
+
             delete game->myLArm;
+
         }
         else if (game->myPhrase->phraseG->getnumguesses() == 5)
         {
@@ -103,41 +156,10 @@ void Form::on_pushButton_2_clicked()
 
         game->win = new youwin();
         game->scene->addItem(game->win);
-    }
-
-
-
-    switch (game->myPhrase->phraseG->getnumguesses()){
-        case 1:
-            game->myHead = new head();
-            game->scene->addItem(game->myHead);
-            break;
-        case 2:
-            game->myBody = new body();
-            game->scene->addItem(game->myBody);
-            break;
-        case 3:
-            game->myRArm = new rightArm();
-            game->scene->addItem(game->myRArm);
-            break;
-
-        case 4:
-            game->myLArm = new leftArm();
-            game->scene->addItem(game->myLArm);
-            break;
-
-        case 5:
-            game->myRLeg = new rightLeg();
-            game->scene->addItem(game->myRLeg);
-            break;
-        case 6:
-            game->myLLeg = new leftLeg();
-            game->scene->addItem(game->myLLeg);
-            game->over = new gameover();
-            game->scene->addItem(game->over);
-            break;
 
     }
+    game->myPhrase->phraseG->incorrectGuess = false;
     ui->lineEdit_2->setText(QString(""));
+
 
 }

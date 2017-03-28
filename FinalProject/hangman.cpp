@@ -22,6 +22,7 @@ const int maxGuesses = 6; //6 body parts
 hangman::hangman(QWidget * parent) {
 
     f = new Form();
+    f->move(500,500);
     f->show();
 
     scene = new QGraphicsScene();

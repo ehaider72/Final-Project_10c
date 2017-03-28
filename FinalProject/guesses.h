@@ -16,12 +16,18 @@ public:
     QString getCurrentGuess();
     void setGuess(QString g);
     int getnumguesses ();
+    void setnumguesses();
     void increaseguess();
+
+     bool incorrectGuess = false;
+
 
 private:
     int num = 0;
     bool correctGuess;
     QString currentGuess = "";//current guess (ex 'A')
+
+
 
 };
 

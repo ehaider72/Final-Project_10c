@@ -1744,7 +1744,6 @@ release\hangman.obj: ..\FinalProject\hangman.cpp D:\Installs\Qt\5.8\msvc2013_64\
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QTimer \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtimer.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbasictimer.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QDebug \
 		../FinalProject/hangman.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsView \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsview.h \
@@ -2476,17 +2475,16 @@ release\guesses.obj: ..\FinalProject\guesses.cpp D:\Installs\Qt\5.8\msvc2013_64\
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixelformat.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixmap.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpen.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QDebug \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QKeyEvent \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qevent.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qkeysequence.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurl.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurlquery.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfile.h \
@@ -2692,14 +2690,6 @@ release\form.obj: ..\FinalProject\form.cpp D:\Installs\Qt\5.8\msvc2013_64\includ
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfont.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpen.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QDebug \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
 		../FinalProject/form.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QWidget \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qwidget.h \
@@ -2710,6 +2700,13 @@ release\form.obj: ..\FinalProject\form.cpp D:\Installs\Qt\5.8\msvc2013_64\includ
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcursor.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qkeysequence.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurl.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurlquery.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfile.h \
@@ -2827,23 +2824,6 @@ release\phrases.obj: ..\FinalProject\phrases.cpp D:\Installs\Qt\5.8\msvc2013_64\
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixelformat.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixmap.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpen.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\QDebug \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QKeyEvent \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qevent.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qkeysequence.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurl.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurlquery.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfile.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfiledevice.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qvector2d.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtouchdevice.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QInputDialog \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qinputdialog.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qdialog.h \
@@ -2853,6 +2833,21 @@ release\phrases.obj: ..\FinalProject\phrases.cpp D:\Installs\Qt\5.8\msvc2013_64\
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfontinfo.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qsizepolicy.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcursor.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qkeysequence.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qevent.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qurlquery.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfile.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qfiledevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qvector2d.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtouchdevice.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qlineedit.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qframe.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtextcursor.h \
@@ -2979,8 +2974,9 @@ release\gameover.obj: ..\FinalProject\gameover.cpp ../FinalProject/gameover.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfont.h
 
 release\youwin.obj: ..\FinalProject\youwin.cpp ../FinalProject/youwin.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QFont \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfont.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\QGraphicsTextItem \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qgraphicsitem.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgetsglobal.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtguiglobal.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qglobal.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qconfig-bootstrapped.h \
@@ -3005,37 +3001,67 @@ release\youwin.obj: ..\FinalProject\youwin.cpp ../FinalProject/youwin.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnumeric.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qversiontagging.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtgui-config.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qnamespace.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobjectdefs_impl.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs_win.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstring.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qchar.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearray.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrefcount.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qarraydata.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringbuilder.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qshareddata.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhash.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiterator.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlist.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qalgorithms.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiterator.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhashfunctions.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpair.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qbytearraylist.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringlist.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qregexp.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qstringmatcher.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcoreevent.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qscopedpointer.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmetatype.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvarlengtharray.h \
 		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontainerfwd.h \
-		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject_impl.h
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qobject_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvariant.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdebug.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qhash.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qtextstream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qiodevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qlocale.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qshareddata.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qvector.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qpoint.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qset.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qcontiguouscache.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qrect.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qmargins.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qsize.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpainterpath.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qmatrix.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpolygon.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qregion.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qwindowdefs_win.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qdatastream.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtCore\qline.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixmap.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpaintdevice.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qcolor.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgb.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qrgba64.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qimage.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qpixelformat.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qtransform.h \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\QFont \
+		D:\Installs\Qt\5.8\msvc2013_64\include\QtGui\qfont.h
 
 release\qrc_resources.obj: release\qrc_resources.cpp 
 

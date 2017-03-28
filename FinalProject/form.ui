@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Set Phrase</string>
+    <string>Set Word</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -41,7 +41,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Have a friend enter a phrase:</string>
+    <string>Have a friend enter a word:</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

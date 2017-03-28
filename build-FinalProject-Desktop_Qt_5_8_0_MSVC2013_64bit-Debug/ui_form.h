@@ -91,8 +91,8 @@ public:
     void retranslateUi(QWidget *Form)
     {
         Form->setWindowTitle(QApplication::translate("Form", "Form", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("Form", "Set Phrase", Q_NULLPTR));
-        label->setText(QApplication::translate("Form", "Have a friend enter a phrase:", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("Form", "Set Word", Q_NULLPTR));
+        label->setText(QApplication::translate("Form", "Have a friend enter a word:", Q_NULLPTR));
         lineEdit->setText(QString());
         pushButton_2->setText(QApplication::translate("Form", "Guess Letter", Q_NULLPTR));
         label_2->setText(QApplication::translate("Form", "letter:", Q_NULLPTR));

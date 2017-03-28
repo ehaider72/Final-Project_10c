@@ -54,23 +54,27 @@ void Phrases::setupUnsolved() //previously was type QString
 void Phrases::updateUnsolved()
 {
    QString guess = phraseG->getCurrentGuess();
-  int count= 0; //numer of guesses
+  int count= 0; //numer of correct guesses
   QString temp = "@";
 
     for(int i=0; i<phrase.size(); i++){
-        if (phrase[i] == guess[0]){
+        if (phrase[i] == guess[0]){ //if correct letter, update unsolved
             unsolved[i] = guess[0];
-            count++;}
-        else if (!(unsolved[i].isLetter()))
+            count++;
+
+        }
+        else if (!(unsolved[i].isLetter())) //keep current update and previous updates, rest are '@'
         {
+
             unsolved[i] = temp[0];
         }
 
     }
+
     int cnt = 0;
-    for (int i =0; i<phrase.size();i++){
+    for (int i =0; i<phrase.size();i++){//are there are '@' left in unsolved phrase
         if(unsolved[i].isLetter())
-            cnt++;
+            cnt++;  //cnt = phrase.size corresponds to zero '@' in unsolved--the unsolved is now solved
     }
     if (phrase.size() == cnt)
         solved = true;
@@ -79,7 +83,9 @@ void Phrases::updateUnsolved()
 
 
     if (count==0){
+        phraseG->incorrectGuess = true;
         phraseG->increaseguess();
+
     }
     printUnsolved();
 

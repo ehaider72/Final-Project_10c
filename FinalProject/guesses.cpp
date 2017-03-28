@@ -29,6 +29,10 @@ QString Guesses::getCurrentGuess(){
     return currentGuess;
 }
 
+void Guesses::setnumguesses(){
+    num = 0;
+}
+
 void Guesses::setGuess(QString g)
 {
     currentGuess =g;
@@ -41,5 +45,5 @@ int Guesses::getnumguesses()
 
 void Guesses::increaseguess()
 {
-    num++;
+    num++; //number of incorrect guesses
 }
